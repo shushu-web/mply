@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しょーなん鯖!　お楽しみ機能</title>
+    <script>
+          let d = document.getElementById("result");
+          let r = Math.ceil(Math.random()*16);
+          diceimg = '<img src="' + r + '.png" alt="dice" style="display: block; margin: auto;">';
+          document.write(diceimg);
+          setTimeout("redirect()", 3000);
+        function redirect(){
+          location.href="./index.html";
+        }
+      </script>
+</head>
+<body>
+</body>
+</html>
