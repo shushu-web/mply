@@ -8,14 +8,28 @@
     <script>
           let d = document.getElementById("result");
           let r = Math.ceil(Math.random()*16);
-          diceimg = '<img src="' + r + '.png" alt="dice" style="display: block; margin: auto;">';
+          diceimg = '<img src="' + r + '.png" alt="お楽しみカード" style="display: block; margin: auto;">';
           document.write(diceimg);
-          setTimeout("redirect()", 3000);
-        function redirect(){
-          location.href="./index.html";
-        }
+          function narabekae() {
+
+            //要素を配列に格納　..①
+            let arr = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"];
+            //最初の要素数を覚えておく　..②
+            let deflength = arr.length;
+
+            //最初の要素数、くりかえし　..③
+            i=0;i<deflength;i++
+
+            //現在の要素数から、添字をランダムに取り出す　..④
+            let index = Math.floor(Math.random()*arr.length);
+            //出力　..⑤
+            console.log(arr[index]);
+            //添字の要素を配列から削除　..⑥
+            arr.splice(index,1);
+            }
       </script>
 </head>
 <body>
+    <button onclick="narabekae">山から取る！</button>
 </body>
 </html>
